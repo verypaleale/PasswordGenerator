@@ -67,3 +67,13 @@ function writePassword() {
 
   passwordText.value = password;
 }
+
+function copyToClipboard() {
+  var copyPassword = document.getElementById("password");
+  copyPassword.select();
+  document.execCommand("copy");
+  alert("Copied your password: " + copyPassword.value);
+}
+clipboardBtn.addEventListener("click", copy);
+
+generateBtn.addEventListener("click", writePassword);
